@@ -1,0 +1,167 @@
+<!--This is an example with 3 tabs-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500|News+Cycle:400,700&amp;display=swap" rel="stylesheet">
+<style>
+  .hr1 {
+    background: linear-gradient(to right, ##A9A9A9, ##A9A9A9);
+    height: 5px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  button {
+    background-color: #fff;
+  }
+
+  button {
+    border: none;
+
+  }
+
+  button:hover {
+    background-color: #F3F4F7;
+  }
+
+  button:active {
+    background-color: #3399FF;
+    color: white;
+  }
+
+  button:focus {
+    background-color: #3399FF;
+    color: white;
+  }
+
+  button: {
+    font-family: "Graphik", Helvetica, Arial, sans-serif;
+
+  }
+
+  .uk-subnav {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <ul class="uk-subnav uk-subnav-pill" uk-switcher="">
+    <li><a href="#" data-id="text_621e0356-85fe-4101-886e-e5553e1659a4">Active Loans</a></li> <!--You should have the text_ string identifiers from your original mode html, here I used my text box identifiers-->
+    <li><a href="#" data-id="text_83d8ec91-5bbb-4ba9-a3ac-4dc860f8d966">Portfolio DQ</a></li>
+    <li><a href="#" data-id="text_83d8ec91-5bbb-4ba9-a3ac-4dc860f8d966">DQ YoY</a></li>
+  </ul>
+  <hr class="hr1">
+  <ul class="uk-switcher uk-margin">
+
+    <!--This is tab 1-->
+    <!--wrap each of your tabs with li and /li-->
+    <!--<div class="row">-->
+    <!--  <div class="col-md-12"><mode-text id="text_621e0356-85fe-4101-886e-e5553e1659a4" dataset="dataset" options="text_options">-->
+    <!--      <h1 class="ql-align-center">Active Loans Borrower Mix</h1>-->
+    <!--    </mode-text></div>-->
+    <!--</div>-->
+    <li>
+      <div class="row" data-row-height="small"> <!--this changes chart height. And this div block has 2 charts in a row-->
+        <div class="col-md-6"><mode-chart id="chart_e4fb0466e500" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_38ff6f9357f3" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <!--<div class="row">--> <!--1 chart in a row-->
+      <!--  <div class="col-md-12"><mode-chart id="chart_6e96b8d7e78b" dataset="dataset" options="chart_options"></mode-chart></div>-->
+      <!--</div>-->
+      <div class="row" data-row-height="large">
+        <div class="col-md-6"><mode-chart id="chart_8cc8b4c21878" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_6e96b8d7e78b" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6"><mode-chart id="chart_afcc5cb7372e" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_cd44e2f84cb7" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6"><mode-chart id="chart_975325b2c309" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_33bf54f63d5c" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+    </li>
+
+    <!--This is tab 2-->
+    <!--<div class="row">-->
+    <!--  <div class="col-md-12"><mode-text id="text_83d8ec91-5bbb-4ba9-a3ac-4dc860f8d966" dataset="dataset" options="text_options">-->
+    <!--      <h1 class="ql-align-center">Portfolio Delinquency </h1>-->
+    <!--    </mode-text></div>-->
+    <!--</div>-->
+    <li>
+      <div class="row">
+        <div class="col-md-12"><mode-text id="text_ddee802f-2120-4a20-b458-9951041929fe" dataset="dataset" options="text_options">
+            <h3 class="ql-align-center">1+ DPD DQ</h3>
+          </mode-text></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><mode-chart id="chart_d63f8192f383" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6"><mode-chart id="chart_4c6c804e1070" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_0f3618cc9afc" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <!--<div class="row">-->
+      <!--  <div class="col-md-12"><mode-chart id="chart_0f3618cc9afc" dataset="dataset" options="chart_options"></mode-chart></div>-->
+      <!--</div>-->
+      <div class="row">
+        <div class="col-md-12"><mode-chart id="chart_31a7263d5fac" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><mode-chart id="chart_c4ae66b20c31" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><mode-text id="text_fea6c024-1280-4f90-9363-cb780251442a" dataset="dataset" options="text_options">
+            <h3 class="ql-align-center">30+ DPD DQ</h3>
+          </mode-text></div>
+      </div>
+      <div class="row" data-row-height="large">
+        <div class="col-md-12"><mode-chart id="chart_8c14c93538f9" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row" data-row-height="large">
+        <div class="col-md-12"><mode-chart id="chart_2672804d5f6b" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+    </li>
+
+    <!--This is tab 3-->
+    <li>
+      <!--<div class="row">-->
+      <!--  <div class="col-md-12"><mode-text id="text_cd834bd5-a7e2-45e5-895c-3aec7102bdec" dataset="dataset" options="text_options">-->
+      <!--      <h3 class="ql-align-center">Delinquency YoY Trend</h3>-->
+      <!--    </mode-text></div>-->
+      <!--</div>-->
+      <div class="row">
+        <div class="col-md-12"><mode-text id="text_afb05d68-ad31-45bd-bc1a-b0ff3618ea6f" dataset="dataset" options="text_options">
+            <h3 class="ql-align-center">Overall DQ YoY</h3>
+          </mode-text></div>
+      </div>
+      <div class="row" data-row-height="large">
+        <div class="col-md-6"><mode-chart id="chart_a8e808809e1e" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_20fb151a33d1" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row" data-row-height="large">
+        <div class="col-md-6"><mode-chart id="chart_099e8d0b46c5" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_a2c6f8c191fa" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><mode-text id="text_fa8700db-ba1f-4bbb-8e80-b4a8166b3814" dataset="dataset" options="text_options">
+            <h3 class="ql-align-center">By Risk Grade DQ YoY</h3>
+          </mode-text></div>
+      </div>
+      <div class="row" data-row-height="large">
+        <div class="col-md-12"><mode-chart id="chart_94ba7ad71c38" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+      <div class="row" data-row-height="large">
+        <div class="col-md-12"><mode-chart id="chart_6512d7943d7f" dataset="dataset" options="chart_options"></mode-chart></div>
+      </div>
+    </li>
+
+  </ul>
+</div>
