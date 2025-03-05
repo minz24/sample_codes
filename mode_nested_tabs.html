@@ -1,5 +1,5 @@
 <!--This is an example with 3 tabs-->
-
+<!-- No need to change start from this row -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
@@ -51,11 +51,14 @@
   <h1>{{ title }}</h1>
   <p>{{ description }}</p>
 </div>
+<!-- No need to change end this row -->
+
 <div class="mode-grid container">
+  <!--   setting top level tabs -->
   <ul class="uk-subnav uk-subnav-pill" uk-switcher="">
-    <li><a href="#" data-id="text_621e0356-85fe-4101-886e-e5553e1659a4">Active Loans</a></li> <!--You should have the text_ string identifiers from your original mode html, here I used my text box identifiers-->
-    <li><a href="#" data-id="text_83d8ec91-5bbb-4ba9-a3ac-4dc860f8d966">Portfolio DQ</a></li>
-    <li><a href="#" data-id="text_83d8ec91-5bbb-4ba9-a3ac-4dc860f8d966">DQ YoY</a></li>
+    <li><a href="#" data-id="">Active Loans</a></li> 
+    <li><a href="#" data-id="">Portfolio DQ</a></li>
+    <li><a href="#" data-id="">DQ YoY</a></li>
   </ul>
   <hr class="hr1">
   <ul class="uk-switcher uk-margin">
@@ -70,7 +73,7 @@
     <li>
       <div class="row" data-row-height="small"> <!--this changes chart height. And this div block has 2 charts in a row-->
         <div class="col-md-6"><mode-chart id="chart_e4fb0466e500" dataset="dataset" options="chart_options"></mode-chart></div> <!--col-md- controls chart width, you can set it to 12/8/6/4 (full width is 12)-->
-        <div class="col-md-6"><mode-chart id="chart_38ff6f9357f3" dataset="dataset" options="chart_options"></mode-chart></div>
+        <div class="col-md-6"><mode-chart id="chart_38ff6f9357f3" dataset="dataset" options="chart_options"></mode-chart></div> <!--mode-chart id should be in your mode default html, each view has its unique id-->
       </div>
       <!--<div class="row">--> <!--1 chart in a row-->
       <!--  <div class="col-md-12"><mode-chart id="chart_6e96b8d7e78b" dataset="dataset" options="chart_options"></mode-chart></div>-->
